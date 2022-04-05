@@ -44,8 +44,8 @@ function setup() {
   originX = window_sizeX / 2;
   originY = window_sizeY / 2;
 
-  socket = io.connect("http://10.184.121.139:3000");
-
+  socket = io.connect("http://" + IP_ADDRESS + ":" + PORT);
+ 
   socket.on("update", update);
   socket.on("timer", updateTimer);
 
